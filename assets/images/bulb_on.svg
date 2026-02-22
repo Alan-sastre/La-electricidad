@@ -1,0 +1,45 @@
+<svg width="150" height="220" viewBox="0 0 150 220" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Glowing Glass Gradient -->
+    <radialGradient id="glowGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff" stop-opacity="1"/>
+      <stop offset="70%" stop-color="#f1c40f" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#f39c12" stop-opacity="0.6"/>
+    </radialGradient>
+    <!-- Outer Glow Filter -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <!-- Base Gradient -->
+    <linearGradient id="baseGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7f8c8d"/>
+      <stop offset="50%" stop-color="#bdc3c7"/>
+      <stop offset="100%" stop-color="#7f8c8d"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Glow Circle Background -->
+  <circle cx="75" cy="80" r="90" fill="#f1c40f" opacity="0.3" filter="url(#glow)"/>
+
+  <!-- Glass Bulb -->
+  <path d="M75 10 C 35 10, 10 45, 10 80 C 10 115, 40 140, 50 150 L 100 150 C 110 140, 140 115, 140 80 C 140 45, 115 10, 75 10 Z" fill="url(#glowGrad)" stroke="#f1c40f" stroke-width="2" filter="url(#glow)"/>
+
+  <!-- Filament (On - Hot) -->
+  <path d="M60 150 L 60 110 Q 75 80 90 110 L 90 150" stroke="#e74c3c" stroke-width="3" fill="none"/>
+  <path d="M65 110 Q 75 130 85 110" stroke="#fff" stroke-width="2" fill="none" filter="url(#glow)"/>
+
+  <!-- Screw Base -->
+  <rect x="50" y="150" width="50" height="50" rx="5" fill="url(#baseGrad)"/>
+
+  <!-- Threads -->
+  <path d="M50 160 Q 75 170 100 160" stroke="#606d70" stroke-width="2" fill="none"/>
+  <path d="M50 175 Q 75 185 100 175" stroke="#606d70" stroke-width="2" fill="none"/>
+  <path d="M50 190 Q 75 200 100 190" stroke="#606d70" stroke-width="2" fill="none"/>
+
+  <!-- Bottom Tip -->
+  <path d="M60 200 L 90 200 L 75 220 Z" fill="#34495e"/>
+</svg>

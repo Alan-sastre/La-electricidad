@@ -1,0 +1,25 @@
+<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Wood Gradient -->
+    <linearGradient id="woodGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#d35400"/>
+      <stop offset="100%" stop-color="#a04000"/>
+    </linearGradient>
+    <!-- Wood Grain Pattern -->
+    <pattern id="woodGrain" x="0" y="0" width="100" height="20" patternUnits="userSpaceOnUse">
+      <path d="M0 10 Q 25 0 50 10 T 100 10" stroke="#8e44ad" stroke-opacity="0.1" fill="none" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Table Top -->
+  <rect x="20" y="100" width="760" height="200" rx="10" fill="url(#woodGrad)"/>
+  <rect x="20" y="100" width="760" height="200" rx="10" fill="url(#woodGrain)"/>
+
+  <!-- Table Edge/Thickness -->
+  <rect x="20" y="300" width="760" height="30" rx="5" fill="#6e2c00"/>
+
+  <!-- Legs (Perspective) -->
+  <rect x="50" y="330" width="40" height="70" fill="#5d4037"/>
+  <rect x="710" y="330" width="40" height="70" fill="#5d4037"/>
+  <path d="M90 330 L110 330 L100 380 L80 380 Z" fill="#3e2723" opacity="0.6"/> <!-- Shadow hint -->
+</svg>

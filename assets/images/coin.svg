@@ -1,0 +1,7 @@
+<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+  <!-- Coin Body -->
+  <circle cx="30" cy="30" r="25" fill="#B0BEC5" stroke="#78909C" stroke-width="2"/>
+  <circle cx="30" cy="30" r="20" fill="none" stroke="#78909C" stroke-width="1" stroke-dasharray="2,2"/>
+  <!-- Text -->
+  <text x="30" y="35" font-family="Arial" font-size="20" fill="#546E7A" text-anchor="middle" font-weight="bold">$1</text>
+</svg>

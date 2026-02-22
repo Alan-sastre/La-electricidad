@@ -1,0 +1,45 @@
+<svg width="200" height="150" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="frameMetal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#C0C0C0;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#E8E8E8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#A9A9A9;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="polySi" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#104E8B;stop-opacity:1" />
+      <stop offset="25%" style="stop-color:#1874CD;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#104E8B;stop-opacity:1" />
+      <stop offset="75%" style="stop-color:#1874CD;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#104E8B;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="glassReflect" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:0.4" />
+      <stop offset="100%" style="stop-color:#FFFFFF;stop-opacity:0" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Stand Legs -->
+  <path d="M60,110 L40,150" stroke="#696969" stroke-width="6" stroke-linecap="round"/>
+  <path d="M140,110 L160,150" stroke="#696969" stroke-width="6" stroke-linecap="round"/>
+  <path d="M50,130 L150,130" stroke="#696969" stroke-width="4" /> <!-- Crossbar -->
+  
+  <!-- Panel Frame -->
+  <rect x="10" y="10" width="180" height="110" rx="4" ry="4" fill="url(#frameMetal)" stroke="#808080" stroke-width="1"/>
+  
+  <!-- Panel Surface -->
+  <rect x="15" y="15" width="170" height="100" fill="url(#polySi)" />
+  
+  <!-- Grid Lines (Busbars) -->
+  <g stroke="#C0C0C0" stroke-width="1" opacity="0.7">
+      <line x1="15" y1="40" x2="185" y2="40" />
+      <line x1="15" y1="65" x2="185" y2="65" />
+      <line x1="15" y1="90" x2="185" y2="90" />
+      <!-- Vertical fingers -->
+      <line x1="57" y1="15" x2="57" y2="115" stroke-width="0.5" />
+      <line x1="100" y1="15" x2="100" y2="115" stroke-width="0.5" />
+      <line x1="142" y1="15" x2="142" y2="115" stroke-width="0.5" />
+  </g>
+  
+  <!-- Glass Reflection -->
+  <path d="M15,15 L185,15 L160,50 L15,50 Z" fill="url(#glassReflect)"/>
+</svg>

@@ -1,0 +1,53 @@
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="wallSiding" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#F5F5DC;stop-opacity:1" /> <!-- Beige -->
+      <stop offset="100%" style="stop-color:#E8E8D0;stop-opacity:1" />
+    </linearGradient>
+    <pattern id="sidingLines" x="0" y="0" width="20" height="10" patternUnits="userSpaceOnUse">
+      <rect width="20" height="10" fill="url(#wallSiding)" />
+      <line x1="0" y1="10" x2="20" y2="10" stroke="#D3D3B0" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="roofTile" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B4513;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#5D4037;stop-opacity:1" />
+    </linearGradient>
+    <filter id="dropShadow">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2"/>
+      <feOffset dx="2" dy="2"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.3"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Chimney -->
+  <rect x="140" y="30" width="20" height="40" fill="#800000" stroke="#500000" stroke-width="1"/>
+  <rect x="138" y="25" width="24" height="6" fill="#600000" />
+  
+  <!-- Main Body -->
+  <rect x="30" y="80" width="140" height="100" fill="url(#sidingLines)" filter="url(#dropShadow)"/>
+  
+  <!-- Roof -->
+  <path d="M100,10 L185,80 L15,80 Z" fill="url(#roofTile)" stroke="#3E2723" stroke-width="2" stroke-linejoin="round" filter="url(#dropShadow)"/>
+  
+  <!-- Roof Texture Lines -->
+  <path d="M45,60 L155,60" stroke="#000" opacity="0.1"/>
+  <path d="M65,40 L135,40" stroke="#000" opacity="0.1"/>
+  
+  <!-- Door Frame -->
+  <rect x="85" y="115" width="30" height="65" fill="#654321" />
+  <!-- Door Panel -->
+  <rect x="88" y="118" width="24" height="62" fill="#8B4513" stroke="#5D4037" stroke-width="1"/>
+  <!-- Door Details -->
+  <rect x="92" y="125" width="16" height="20" fill="none" stroke="#5D4037" stroke-width="1"/>
+  <rect x="92" y="150" width="16" height="20" fill="none" stroke="#5D4037" stroke-width="1"/>
+  <circle cx="108" cy="150" r="2" fill="#FFD700" /> <!-- Handle -->
+  
+  <!-- Base/Foundation -->
+  <rect x="28" y="180" width="144" height="5" fill="#696969" />
+</svg>

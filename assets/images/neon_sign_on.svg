@@ -1,0 +1,16 @@
+<svg width="120" height="60" viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect x="5" y="5" width="110" height="50" rx="5" fill="#212121" stroke="#424242" stroke-width="2"/>
+  <!-- Neon Tube ON state (glowing red) -->
+  <path d="M20,30 L30,20 L40,30 M50,30 L50,20 L60,20 L60,30 M70,30 L70,20 L80,20 M80,25 L70,25 M80,30 L70,30 M90,30 L90,20 L100,30 L100,20" 
+        fill="none" stroke="#FF1744" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
+  <defs>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+</svg>
